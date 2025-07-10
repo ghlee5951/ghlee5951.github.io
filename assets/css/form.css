@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*==============================================
+@ PC 기본
+==============================================*/
+/*----------------------------------------------------------------------
+- 입력박스
+-------------------------------------------------------------------------*/
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=search],
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=file],
+input[type=password]	{
+	position:relative;
+	display:block;
+	width:100%;
+	height:45px;
+	padding:0 20px;
+	color:#222;
+	font-weight:700;
+	font-size:16px;
+	line-height:1; 
+	border:1px solid #f2f2f2;
+	border-radius:0;
+	background-color:#f2f2f2;
+	box-sizing:border-box;
+	z-index:0;
+}
+input[type=file] {
+	line-height:45px;
+}
+textarea {
+	position:relative;
+	display:block;
+	width:100%;
+	height:240px;
+	padding:15px 20px; 
+	color:#222;
+	font-weight:700;
+	font-size:16px;
+	text-align:left;
+	line-height:1.5;
+	border:1px solid #f2f2f2;
+	background-color:#f2f2f2;
+	border-radius:0;
+	overflow:auto;
+	resize:none;
+	box-sizing:border-box;
+	z-index:0;
+}
+select {
+	position:relative;
+	display:block;
+	width:100%;
+	height:45px;
+	padding:0 44px 0 20px;
+	color:#222;
+	font-weight:700;
+	text-align:left;
+	font-size:16px;
+	line-height:1;
+	border:1px solid #bdbdbd;
+	border-radius:0;
+	background-image:url(../images/icons/icon-select-arrow-gray.png);
+	background-position:right 12px center;
+	background-repeat:no-repeat;
+	background-color:#fff;
+	background-size:24px auto;
+	box-sizing:border-box;
+	z-index:0;
+}
+
+/* 입력태그 placeholder 설정 */
+::-webkit-input-placeholder	{color:#666;}
+::-moz-placeholder	{color:#666;}
+:-ms-input-placeholder	{color:#666;}
+:-moz-placeholder   {color:#666;}
+
+
+.white::-webkit-input-placeholder	{color:#bbb;}
+.white::-moz-placeholder	{color:#bbb;}
+.white:-ms-input-placeholder	{color:#bbb;}
+.white:-moz-placeholder   {color:#bbb;}
+
+/* Readonly */
+input[type=text]:read-only,
+input[type=number]:read-only,
+input[type=email]:read-only,
+input[type=tel]:read-only,
+input[type=url]:read-only,
+input[type=password]:read-only,
+textarea:read-only {color:#222; background-color:#f0f0f0; border-color:#bdbdbd; opacity:1;  box-shadow:none;}
+
+/* Disabled */
+input[type=text]:disabled,
+input[type=number]:disabled,
+input[type=email]:disabled,
+input[type=tel]:disabled,
+input[type=url]:disabled,
+input[type=password]:disabled,
+select:disabled,
+textarea:disabled {color:#aaa; background-color:#f5f5f5; border-color:#ccc; opacity:1;}
+
+/* 체크박스형 */
+.form-checkbox {position:relative;display:inline-block;}
+.form-checkbox input {position:absolute; top:0; left:0; display:block; width:100%; height:100%; opacity:0; cursor:pointer;}
+.form-checkbox input.checked + .form-check-icon:before,
+.form-checkbox input:checked + .form-check-icon:before{border-color:#1682ff;}
+.form-checkbox input.checked + .form-check-icon:after,
+.form-checkbox input:checked + .form-check-icon:after{opacity:1;}
+.form-checkbox input.checked.disabled + .form-check-icon:after,
+.form-checkbox input:checked:disabled + .form-check-icon:after{opacity:1;}
+.form-checkbox input.checked.disabled + .form-check-icon:before,
+.form-checkbox input:checked:disabled + .form-check-icon:before{opacity:0;}
+.form-checkbox input:checked:disabled + .form-check-icon > em {opacity:1;}
+.form-checkbox input.disabled + .form-check-icon:after,
+.form-checkbox input:disabled + .form-check-icon:after {opacity:0;}
+.form-checkbox input.disabled + .form-check-icon:before,
+.form-checkbox input:disabled + .form-check-icon:before {opacity:0.5;}
+.form-checkbox input.disabled + .form-check-icon > em,
+.form-checkbox input:disabled + .form-check-icon > em {opacity:0.5;}
+.form-checkbox .form-check-icon {position:relative; display:block; min-width:14px; min-height:24px;}
+.form-checkbox .form-check-icon:before {content:''; position:absolute; top:5px; left:0; display:block; width:14px; height:14px; z-index:5; opacity:1;  background:#fff; border:1px solid #888; box-sizing:border-box; transition:opacity 0.25s ease;}
+.form-checkbox .form-check-icon:after {content:''; position:absolute; top:8px; left:3px; display:block; width:8px; height:8px; z-index:5; background:#1682ff;  box-sizing:border-box; transition:transform 0.25s ease; opacity:0;}
+.form-checkbox .form-check-icon > em {display:inline-block; padding-left:24px; font-size:18px; line-height:24px;}
+.form-checkbox .form-check-icon > em:empty {display:none;}
+
+/* 라디오박스형 */
+.form-radiobox {position:relative;display:inline-block; line-height:1;}
+.form-radiobox input {position:absolute; top:0; left:0; display:block; width:100%; height:100%; opacity:0; cursor:pointer;}
+.form-radiobox input.checked + .form-check-icon:before,
+.form-radiobox input:checked + .form-check-icon:before{border-color:#1682ff;}
+.form-radiobox input.checked + .form-check-icon:after,
+.form-radiobox input:checked + .form-check-icon:after{opacity:1;}
+.form-radiobox input.checked.disabled + .form-check-icon:after,
+.form-radiobox input:checked:disabled + .form-check-icon:after{opacity:0.5;}
+.form-radiobox input.checked.disabled + .form-check-icon:before,
+.form-radiobox input:checked:disabled + .form-check-icon:before{opacity:0;}
+.form-radiobox input.disabled + .form-check-icon:after,
+.form-radiobox input:disabled + .form-check-icon:after {opacity:0;}
+.form-radiobox input.disabled + .form-check-icon:before,
+.form-radiobox input:disabled + .form-check-icon:before {opacity:0.5;}
+.form-radiobox input.disabled + .form-check-icon > em,
+.form-radiobox input:disabled + .form-check-icon > em {opacity:0.5;}
+.form-radiobox .form-check-icon {position:relative; display:block; min-width:18px; min-height:18px;}
+.form-radiobox .form-check-icon:before {content:''; position:absolute; top:0; left:0; display:block; width:18px; height:18px; z-index:5; opacity:1;  background:#fff; border:1px solid #888; border-radius:50%; box-sizing:border-box; transition:opacity 0.25s ease;}
+.form-radiobox .form-check-icon:after {content:''; position:absolute; top:4px; left:4px; display:block; width:10px; height:10px; z-index:5; background:#1682ff; border-radius:50%; box-sizing:border-box; transition:transform 0.25s ease; opacity:0;}
+.form-radiobox .form-check-icon > em {display:inline-block; padding-left:28px; font-size:16px; line-height:18px; color:#666;}
+.form-radiobox .form-check-icon > em:empty {display:none;}

@@ -1,0 +1,62 @@
+/* 문서 */
+h2.document-title {font-size:38px; font-weight:700; margin-bottom:40px; color:#222;}
+h3.document-title {font-size:24px; margin-bottom:15px; color:#222;}
+h4.document-title {font-size:18px; margin-bottom:10px; color:#222;}
+.document-group + .document-group {margin-top:100px;}
+.document-cell {color:rgba(255,255,255,0.7);}
+.document-cell + .document-cell {margin-top:50px;}
+.document-detail {margin-top:25px;}
+.document-detail + .document-detail {margin-top:25px;}
+.document-info {font-size:16px; color:rgba(255,255,255,0.7);}
+.document-detail > .document-info {font-size:15px;}
+.example-code {padding:20px; color:#000; background:#fafafa; border:1px solid #eee;}
+.document-data {margin-top:15px;}
+.document-data + .document-data {margin-top:15px;}
+
+/* preview code */
+.preview-code {position:relative;padding:0px 20px; font-family:sans-serif; letter-spacing:0; font-size:14px; line-height:1.4; color:#ccc; background:#2d2d2d;}
+.preview-code pre,
+.preview-code code {font-family:sans-serif; letter-spacing:0.025em; font-size:14px; line-height:1.4; color:#ccc;}
+.preview-code pre {margin:0;}
+.preview-code .hljs {padding:0;}
+.preview-info {margin-top:20px;}
+.preview-code .user-code {padding:20px 0; font-size:14px; line-height:1.4;}
+.preview-code.javascript {padding-top:31px;}
+.preview-code.javascript:before {content:'javascript'; position:absolute; top:-1px; left:-1px; display:inline-block; width:calc( 100% + 2px ); font-size:14px; color:#000; background:#fafafa; padding:5px 10px; border:1px solid #e1e1e1; z-index:5; box-sizing:border-box;}
+.preview-code.css {padding-top:31px;}
+.preview-code.css:before {content:'css'; position:absolute; top:-1px; left:-1px; display:inline-block; width:calc( 100% + 2px );  font-size:14px; color:#000; background:#fafafa; padding:5px 10px; border:1px solid #e1e1e1; z-index:5;  box-sizing:border-box;}
+.preview-code.html {padding-top:31px;}
+.preview-code.html:before {content:'html'; position:absolute; top:-1px; left:-1px; display:inline-block; width:calc( 100% + 2px );  font-size:14px; color:#000; background:#fafafa; padding:5px 10px; border:1px solid #e1e1e1; z-index:5;  box-sizing:border-box;}
+.template-detail.example {padding-top:51px;}
+.template-detail.example:before {content:'example'; position:absolute; top:-1px; left:-1px; display:inline-block; width:calc( 100% + 2px );  font-size:14px; color:#000; background:#fafafa; padding:5px 10px; border:1px solid #e1e1e1; z-index:5;  box-sizing:border-box;}
+
+/* color guide */
+.color-guide{display:flex; flex-wrap:wrap;margin:-5px;}
+.color-guide > li {padding:5px;width:16.6%; box-sizing:border-box;}
+.color-guide .circle {position:relative;max-width:60px;border-radius:50%;margin:0 auto;}
+.color-guide .circle span {display:block;position:relative;padding-top:100%;border-radius:50%;margin:0 auto;}
+.color-guide .txt {font-size:15px;margin:10px 0 0 0;text-align:center;}
+
+/* 템플릿 */
+.template-wrap {line-height:1.4;}
+.template-wrap + .template-wrap {margin-top:80px;}
+.template-wrap > h2 {font-size:30px;color:#333; font-weight:700; margin-bottom:30px;}
+.template-data {position:relative;}
+.template-data + .template-data {margin-top:60px;}
+.template-data .template-title {display:flex; align-items:center; justify-content:flex-start;width:100%; font-size:22px; color:#333; margin-bottom:15px; font-weight:500;}
+.template-data .template-title + .template-info {margin-top:-10px;}
+.template-data h3.template-title {font-size:22px;}
+.template-data h4.template-title {font-size:18px;}
+.template-data .template-info {font-size:16px; color:#666; margin-bottom:15px;}
+.template-data .template-detail-group {margin-top:20px;}
+.template-data .template-detail-group + .template-detail-group {margin-top:20px;}
+.template-data .template-detail {position:relative; padding:20px; border:1px solid #e1e1e1;}
+.template-data .template-detail-title {font-size:16px; margin-bottom:10px;}
+.template-data .template-btns-ui {margin-top:10px;}
+.template-data .template-btns-ui:only-child {margin-top:0;}
+.template-data .template-btns-ui .data-inner {display:flex; flex-wrap:wrap; margin:-5px;}
+.template-data .template-btns-ui .data-inner > * {flex:0 0 auto; margin:5px;}
+
+.template-btns {position:absolute; top:-1px; right:-1px; display:flex; justify-content:flex-start;}
+.template-btns .template-btns-item + .template-btns-item {margin-left:-1px;}
+.template-btns .btn-code-copy {display:inline-block;font-size:14px;line-height:20px;color:#000;padding:3px 10px; border:1px solid #d8d8d8; border-radius:0;background-color:#fff;}
