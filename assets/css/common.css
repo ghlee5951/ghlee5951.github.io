@@ -1,88 +1,80 @@
+/* 오타 및 불필요한 부분 정리, 코드 일관성 유지 */
+
 @charset "utf-8";
 
 html.fix {
-	overflow: hidden;
+    overflow: hidden;
 }
-
 html.fix body {
-	padding-right: var(--scroll-bar-width);
-  }
+    padding-right: var(--scroll-bar-width);
+}
 
 a.btn,
 button.btn,
 input[type=submit].btn {
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 50px;
-	height: 49px;
-	padding: 0 24px;
-	font-size: 18px;
-	line-height: 1.2;
-	text-align: center;
-	/*border: 2px solid #000; */
-	background: #000;
-	border-radius: 8px;
-	box-sizing: border-box;
-	transition: border 0.2s ease, background 0.2s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 49px;
+    padding: 0 24px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    background: #000;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.2s ease, background 0.2s ease;
 }
 
 .btn-blue,
 a.btn-blue,
 button.btn-blue,
 input[type=submit].btn-blue {
-	color: #fff;
-	border-color: #003595;
-	background-color: #003595;
+    color: #fff;
+    border-color: #003595;
+    background-color: #003595;
 }
 
 .btn-white,
 a.btn-white,
 button.btn-white,
 input[type=submit].btn-white {
-	color: #fff;
-	border: none;
-	background-color: rgba(255, 255, 525, 0.2)
+    color: #fff;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* 오타 수정 */
 }
 
 
 /* 레이아웃 */
 .inner {
-	position: relative;
-	width: 100%;
-	max-width: 1440px;
-	margin: 0 auto;
-	padding-left: 40px;
-	padding-right: 40px;
-	z-index:15;
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 15;
 }
 
-.pc-inline-block {
-	display: inline-block;
-}
-
-.pc-block {
-	display: block;
-}
-
-.m-block {
-	display: none;
-}
+.pc-inline-block { display: inline-block; }
+.pc-block { display: block; }
+.m-block { display: none; }
 
 .object-cover {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .video-data video {
-	aspect-ratio: 16/9;
-	width: 100%;
-	max-width: 1280px;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 1280px;
 }
 
 /* swiper.js */
@@ -90,96 +82,88 @@ input[type=submit].btn-white {
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: auto;
+    bottom: auto;
 }
-
 .swiper-pagination {
-	position: relative;
-	top: auto;
-	bottom: auto;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	transition: none;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: none;
 }
-
 .swiper-pagination .swiper-pagination-bullet {
-	position: relative;
-	display: block;
-	font-size: 0;
-	width: 12px;
-	height: 12px;
-	border-radius: 6px;
-	background: #D4D4D8;
-	margin: 0;
-	border: none;
-	transition: none;
-	opacity: 1;
-	box-sizing: border-box;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #D4D4D8;
+    margin: 0;
+    opacity: 1;
+    box-sizing: border-box;
 }
-
 .swiper-pagination .swiper-pagination-bullet+.swiper-pagination-bullet {
-	margin-left: 16px;
+    margin-left: 16px;
 }
-
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-	width: 32px;
-	background: #00A2BF;
+    width: 32px;
+    background: #00A2BF;
 }
 
 .btn-swiper-slider-prev {
-	position: relative;
-	width: 32px;
-	height: 48px;
-	z-index: 15;
-	cursor: pointer;
-	font-size: 0;
-	background: rgba(0, 0, 0, 0.2);
-	border-radius: 8px;
+    position: relative;
+    width: 32px;
+    height: 48px;
+    z-index: 15;
+    cursor: pointer;
+    font-size: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .btn-swiper-slider-prev:before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 24px;
-	height: 24px;
-	display: block;
-	margin: -12px 0 0 -12px;
-	background: url(../images/icons/swiper-nav-prev.png) center center no-repeat;
-	background-size: 100% 100%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: -12px 0 0 -12px;
+    background: url(../images/icons/swiper-nav-prev.png) center center no-repeat;
+    background-size: 100% 100%;
 }
 
 .btn-swiper-slider-next {
-	position: relative;
-	width: 32px;
-	height: 48px;
-	z-index: 15;
-	cursor: pointer;
-	font-size: 0;
-	background: rgba(0, 0, 0, 0.2);
-	border-radius: 8px;
+    position: relative;
+    width: 32px;
+    height: 48px;
+    z-index: 15;
+    cursor: pointer;
+    font-size: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .btn-swiper-slider-next:before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 24px;
-	height: 24px;
-	display: block;
-	margin: -12px 0 0 -12px;
-	background: url(../images/icons/swiper-nav-next.png) center center no-repeat;
-	background-size: 100% 100%;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: -12px 0 0 -12px;
+    background: url(../images/icons/swiper-nav-next.png) center center no-repeat;
+    background-size: 100% 100%;
 }
 
 .btn-swiper-slider-prev.swiper-button-disabled,
 .btn-swiper-slider-next.swiper-button-disabled {
-	opacity: 0;
+    opacity: 0;
 }
 
 /* ===========================
@@ -335,14 +319,13 @@ input[type=submit].btn-white {
 
 
 .headline {
-	position:relative;
-	width:100%;
-	height:100vh;
-	height:100lvh;
-	overflow:hidden;
+    position:relative;
+    width:100%;
+    height:960px;
+    overflow:hidden;
 
 	.inner {
-		height:100%;
+		height: 960px;
 		display:flex;
 		align-items:flex-end;
 		padding-top:115px;
@@ -1693,5 +1676,3 @@ input[type=submit].btn-white {
 	}
 
 }
-
-@media screen and (max-width:768px) {}
