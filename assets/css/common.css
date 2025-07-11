@@ -2,6 +2,10 @@
 
 @charset "utf-8";
 
+:root {
+    --gutter: clamp(16px, 5vw, 40px);
+}
+
 html.fix {
     overflow: hidden;
 }
@@ -53,8 +57,8 @@ input[type=submit].btn-white {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
     z-index: 15;
 }
 
@@ -552,13 +556,14 @@ input[type=submit].btn-white {
 			}
 		}
 		
-		.point-outer{
-			position:absolute;
-			top:0;
-			left:50%;
-			margin:-104px 0 0 52px;
-			width:55.69%;
-		}
+                .point-outer{
+                        position:absolute;
+                        top:0;
+                        left:50%;
+                        margin-top:-104px;
+                        width:clamp(300px,55.69%,646px);
+                        transform:translateX(-50%);
+                }
 
 		.point-inner {
 			position:relative;			
@@ -984,11 +989,12 @@ input[type=submit].btn-white {
 	border-top-left-radius:200px;
 	text-align:center;
 
-	h3 {
-		img {
-			width:775px;
-		}
-	}
+        h3 {
+                img {
+                        width:100%;
+                        max-width:775px;
+                }
+        }
 
 	.video-wrap {
 		position:relative;
@@ -1079,11 +1085,12 @@ input[type=submit].btn-white {
 		opacity:0.9;
 	}
 
-	h3 {
-		img {
-			width:573px;
-		}
-	}
+        h3 {
+                img {
+                        width:100%;
+                        max-width:573px;
+                }
+        }
 
 	.title {		
 		margin-top:73px;
@@ -1364,13 +1371,14 @@ input[type=submit].btn-white {
 		.point {			
 			width:100%;	
 			
-			.point-outer{
-				position:relative;
-				top:0;
-				left:50%;
-				margin:40px 0 0 -220px;
-				width:646px;
-			}
+                        .point-outer{
+                                position:relative;
+                                top:0;
+                                left:50%;
+                                margin-top:40px;
+                                width:min(646px,90vw);
+                                transform:translateX(-50%);
+                        }
 		}
 	}
 	
