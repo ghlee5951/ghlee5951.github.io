@@ -1235,12 +1235,14 @@ input[type=submit].btn-white {
 	}
 	
 	
-	.headline {		
-	
-		.inner {			
-			padding-top:40px;
-			padding-bottom:40px;
-		}
+        .headline {
+                height:100vh;
+
+                .inner {
+                        height:100vh;
+                        padding-top:40px;
+                        padding-bottom:40px;
+                }
 	
 		.item-data {						
 	
